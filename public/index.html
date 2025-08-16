@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>澳洲电子烟合规与风险自测（18+）</title>
+  <meta name="description" content="仅面向18+成年人，澳洲合规与健康风险自测工具。不推荐品牌。" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>澳洲电子烟合规与风险自测（仅限18+）</h1>
+    <p class="subtitle">法律与健康风险提示：本工具不提供品牌推荐，不比较口味或尼古丁含量，仅用于合规与风险教育。</p>
+  </header>
+
+  <main id="app">
+    <section id="age-gate" class="card">
+      <h2>年龄与合规确认</h2>
+      <p>使用本工具前请确认：</p>
+      <ul>
+        <li>我已年满 18 岁；</li>
+        <li>我理解澳大利亚对含尼古丁电子烟实行处方制度（需医生处方）。</li>
+      </ul>
+      <div class="actions">
+        <label class="checkbox">
+          <input type="checkbox" id="confirm18" /> 我已年满 18 岁
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" id="confirmLaw" /> 我了解并遵守澳洲相关法规
+        </label>
+        <button id="startBtn" disabled>开始 5 题自测</button>
+      </div>
+      <p class="legal">法律参考：Therapeutic Goods Administration (TGA) 对尼古丁电子烟的处方与供应要求。此工具不提供医疗建议。</p>
+    </section>
+
+    <form id="quiz" class="card hidden" novalidate>
+      <h2>五个问题</h2>
+      <ol>
+        <li>
+          <label>你当前是否在使用任何烟草或尼古丁制品？</label>
+          <select name="use" required>
+            <option value="">请选择</option>
+            <option value="none">否，从不使用</option>
+            <option value="cigarette">是，传统香烟</option>
+            <option value="vape">是，电子烟</option>
+            <option value="both">是，两者都使用</option>
+          </select>
+        </li>
+        <li>
+          <label>你使用尼古丁的主要目的是什么？</label>
+          <select name="goal" required>
+            <option value="">请选择</option>
+            <option value="quit">戒烟/减少危害</option>
+            <option value="recreation">娱乐/尝试</option>
+            <option value="stress">缓解压力</option>
+            <option value="other">其他</option>
+          </select>
+        </li>
+        <li>
+          <label>你是否持有医生为含尼古丁电子烟开具的有效处方？</label>
+          <select name="rx" required>
+            <option value="">请选择</option>
+            <option value="yes">是</option>
+            <option value="no">否/不确定</option>
+          </select>
+        </li>
+        <li>
+          <label>你对电子烟潜在健康风险（如尼古丁成瘾、心肺风险、口腔与牙周问题等）的了解程度？</label>
+          <select name="risk" required>
+            <option value="">请选择</option>
+            <option value="low">了解较少</option>
+            <option value="medium">一般了解</option>
+            <option value="high">充分了解</option>
+          </select>
+        </li>
+        <li>
+          <label>你更希望获得哪类帮助？</label>
+          <select name="help" required>
+            <option value="">请选择</option>
+            <option value="law">澳洲法规与合规说明</option>
+            <option value="quit">戒烟/减害与行为支持</option>
+            <option value="health">健康风险科普</option>
+            <option value="doctor">与医生沟通准备清单</option>
+          </select>
+        </li>
+      </ol>
+      <div class="actions">
+        <button type="submit">提交并查看建议</button>
+      </div>
+    </form>
+
+    <section id="result" class="card hidden" aria-live="polite"></section>
+  </main>
+
+  <footer>
+    <p>重要声明：本工具不推荐电子烟品牌、不比较口味或尼古丁含量。若你未成年或无处方，请不要使用含尼古丁产品。</p>
+  </footer>
+  <script src="/script.js"></script>
+</body>
+</html>
