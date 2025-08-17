@@ -29,6 +29,7 @@ main { max-width: 880px; margin: 0 auto; padding: 1rem; }
 }
 .hidden { display: none; }
 .actions { display: flex; gap: .75rem; flex-wrap: wrap; align-items: center; margin-top: .75rem; }
+.lang-toggle { background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,.3); }
 button {
   background: linear-gradient(135deg, #22d3ee, #6366f1);
   color: #0b1020; border: none; padding: .6rem 1rem; border-radius: 10px;
